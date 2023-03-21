@@ -11,14 +11,14 @@
 -> 1
 '''
 
-N = int(input("Input N: "))
-A = list(range(1, N + 1))
-#print(*A, sep=", ", end="")
+n = int(input("Input N: "))
+import random
+array = [random.randint(1, 10) for _ in range(n)]
+print(*array, sep=", ", end="")
 print()
-X = int(input("Input X: "))
+x = int(input("Input X: "))
 count = 0
-if X in A:
-    count +=1
-    print(count)
-else:
-    print(0)
+for i in array:
+    if i == x:
+        count += 1
+print(count)
