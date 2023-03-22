@@ -27,9 +27,9 @@ alphabet = {"A": "1", "E": "1", "I": "1", "O": "1", "U": "1", "L": "1", "N": "1"
 
 
 word = input("Input a word: ").upper()                
-sum = 0
+summa = 0
 for letter in word:
     for key, value in alphabet.items():
-        if letter in key:
-            sum += int(value)
-print(f"Sum of your grades is {sum}.")
+        if letter == key:
+            summa += int(value)
+print(f"Sum of your grades is {summa}.")
