@@ -7,10 +7,17 @@ m - кол-во элементов второго множества. Затем
 
 n = int(input('Введите кол-во элементов первого множества: '))
 m = int(input('Введите кол-во элементов второго множества: '))
-array_1 = [int(input(i)) for i in range(n)]
+
+array_1 = list()
+for i in range(n):
+    x = int(input("Введите число: "))
+    array_1.append(x)
 print(array_1)
 
-array_2 = [int(input(j)) for j in range(m)] 
+array_2 = list()
+for j in range(m):
+    y = int(input("Введите число: "))
+    array_2.append(y)
 print(array_2)
 
 repeated_numbers = set()
