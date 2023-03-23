@@ -11,14 +11,22 @@
 -> 5
 '''
 
-N = int(input("Input N: "))
-A = list(range(1, N + 1))
-print(*A, sep=", ", end="")
+n = int(input("Input N: "))
+
+import random
+array = [random.randint(1, 100) for _ in range(n)]
+print(*array, sep=", ", end="")
 print()
-X = int(input("Input X: "))
-if X <= A[0]:
-    print(A[0])
-elif X >= A[- 1]:
-    print(A[- 1])
-else:
-    print(X)
+
+x = int(input("Input X: "))
+
+new_array = []
+for num in range(len(array)):
+    k = abs(x - array[num])
+    new_array.append(k)
+#print(new_array)
+
+from operator import itemgetter
+index = min(enumerate(new_array), key=itemgetter(1))[0]
+
+print(array[index])
