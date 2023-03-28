@@ -14,4 +14,4 @@ progression = list()
 for num in range(q):
     progression.append(first + num * d)
 
-print(progression) 
+print(*progression, sep=", ", end="") 
